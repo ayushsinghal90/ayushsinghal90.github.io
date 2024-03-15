@@ -37,7 +37,7 @@ export default function About() {
         </div>
         <div className="flex flex-col items-center justify-center lg:col-span-2">
           <div className="bg-surface-brand-secondary flex flex-row space-x-5 rounded-xl p-6 mb-6 text-center h-56">
-            <div className="lg:order-1 justify-start w-32">
+            <div className="lg:order-1 justify-start w-1/3">
               <img
                 src="/Demo.webp"
                 alt="Avatar"
@@ -49,9 +49,11 @@ export default function About() {
                 Ayush Singhal
               </h3>
               <p className="font-zokiak text-t-invert ">
-                Experienced full stack developer skilled in crafting web
-                applications that combine sleek front-end design with robust
-                back-end functionality.
+                Result driven Software Development Engineer with 5 years of
+                experience in designing, developing, and delivering innovative
+                software solutions. Competency in driving impactful projects and
+                mentoring engineers for delivering products and solutions to
+                achieve strategic business outcomes.
               </p>
             </div>
           </div>

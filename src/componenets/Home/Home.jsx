@@ -3,6 +3,7 @@ import Twitter from "../Icons/Assets/Twitter";
 import Github from "../Icons/Assets/Github";
 import LinkedIn from "../Icons/Assets/Linkedin";
 import About from "../About/About";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -20,9 +21,12 @@ export default function Home() {
               Expertise and Seamless User Interfaces
             </p>
             <div className="flex justify-center lg:justify-start mb-8">
-              <div className="bg-surface-brand font-semibold text-t-invert px-6 py-3 rounded-lg mr-4">
+              <Link
+                to="https://www.linkedin.com/in/ayush-singhal-0a994b147/"
+                className="bg-surface-brand font-semibold text-t-invert px-6 py-3 rounded-lg mr-4"
+              >
                 Start a Project
-              </div>
+              </Link>
               <div className="bg-b-secondary font-semibold text-t-secondary px-6 py-3 rounded-lg">
                 Browse Works
               </div>
