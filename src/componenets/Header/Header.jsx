@@ -28,19 +28,19 @@ export default function Header() {
       window.addEventListener("scroll", controlNavbar);
 
       // Cleanup function
-      // return () => {
-      //   window.removeEventListener("scroll", controlNavbar);
-      // };
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
     }
   }, [lastScrollY]);
 
   return (
     <div
-      className={`shadow max-w-7xl mx-auto w-5/6 fixed top-0 left-0 right-0  z-50 transition-transform duration-300 ${
+      className={`max-w-7xl mx-auto w-5/6 fixed top-0 left-0 right-0  z-50 transition-transform duration-300 ${
         showHeader ? "" : "-translate-y-full"
       }`}
     >
-      <header className="bg-surface-secondary m-4 rounded-2xl">
+      <header className="backdrop-blur-md shadow bg-surface-secondary/60 m-4 rounded-2xl">
         <nav className="px-2 lg:px-6 py-3.5">
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <div className="flex items-center lg:order-1">
