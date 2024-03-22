@@ -4,8 +4,39 @@ import Github from "../Icons/Assets/Github";
 import LinkedIn from "../Icons/Assets/Linkedin";
 import About from "../About/About";
 import { Link } from "react-router-dom";
+import Carousel from "../Carousal/Carousal";
+import Logo from "../Cards/Logo";
 
 export default function Home() {
+  const companyLogos = [
+    {
+      src: "/company/deel.png",
+      alt: "Deel",
+      height: "h-16",
+    },
+    {
+      src: "/company/amazon.png",
+      alt: "Amazon",
+      height: "h-9",
+    },
+    {
+      src: "/company/meesho.png",
+      alt: "Meesho",
+      height: "h-20",
+    },
+    {
+      src: "/company/razorpay.png",
+      alt: "Razorpay",
+      height: "h-9",
+    },
+    {
+      src: "/company/hashedin.png",
+      alt: "HashedIn",
+      height: "h-8",
+    },
+    // Add the rest of your logos here
+  ];
+
   return (
     <>
       <div className=" items-center mt-40">
@@ -48,6 +79,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Carousel ChildComponent={Logo} list={companyLogos} />
       <About />
     </>
   );

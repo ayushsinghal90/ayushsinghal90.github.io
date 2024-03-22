@@ -1,5 +1,6 @@
 import Designation from "../Cards/Designation";
 import Skill from "../Cards/Skill";
+import Carousel from "../Carousal/Carousal";
 
 export default function About() {
   return (
@@ -36,7 +37,7 @@ export default function About() {
           />
         </div>
         <div className="flex flex-col items-center justify-center lg:col-span-2">
-          <div className="bg-surface-brand-secondary flex flex-row space-x-5 rounded-xl p-6 mb-6 text-center h-56">
+          <div className="bg-surface-brand-secondary flex flex-row space-x-5 rounded-xl p-6 mb-6 text-center h-48">
             <div className="lg:order-1 justify-start w-1/3">
               <img
                 src="/Demo.webp"
@@ -57,28 +58,85 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="bg-surface-secondary text-center p-6 rounded-xl">
+          <div className="bg-surface-secondary text-center p-6 rounded-xl w-full">
             <h2 className="text-t-secondary font-zodiak text-3xl tracking-wide font-bold mb-4">
               My Stack
             </h2>
             <div className="flex flex-wrap justify-center">
-              <Skill imgSrc="/programming/python.png" skill="Python" />
-              <Skill imgSrc="/programming/java.png" skill="Java" />
-              <Skill imgSrc="/programming/nodejs.png" skill="Node.js" />
+              <Carousel
+                elementMargin=""
+                carouselMargin="mx-1"
+                ChildComponent={Skill}
+                list={[
+                  {
+                    imgSrc: "/programming/python.png",
+                    skill: "Python",
+                  },
+                  {
+                    imgSrc: "/programming/java.png",
+                    skill: "Java",
+                  },
+                  {
+                    imgSrc: "/programming/nodejs.png",
+                    skill: "Node.js",
+                  },
+                  {
+                    imgSrc: "/programming/mysql.png",
+                    skill: "MySql",
+                  },
+                ]}
+              />
 
-              <Skill imgSrc="/programming/mysql.png" skill="MySql" />
-              <Skill imgSrc="/programming/redis.png" skill="Redis" />
-              <Skill imgSrc="/programming/dynamoDB.png" skill="DynamoDb" />
-
-              <Skill imgSrc="/programming/aws.webp" skill="AWS" />
-              <Skill imgSrc="/programming/docker.png" skill="Docker" />
-
-              <Skill imgSrc="/programming/spring.png" skill="Spring Boot" />
-              <Skill imgSrc="/programming/express.png" skill="Express" />
-              <Skill imgSrc="/programming/sequelize.svg" skill="Sequelize" />
-
-              <Skill imgSrc="/programming/aws_s3.png" skill="AWS S3" />
-              <Skill imgSrc="/programming/aws_cdk.png" skill="AWS CDK" />
+              <Carousel
+                elementMargin=""
+                carouselMargin="mx-1"
+                ChildComponent={Skill}
+                list={[
+                  {
+                    imgSrc: "/programming/redis.png",
+                    skill: "Redis",
+                  },
+                  {
+                    imgSrc: "/programming/dynamoDB.png",
+                    skill: "DynamoDB",
+                  },
+                  {
+                    imgSrc: "/programming/aws.webp",
+                    skill: "AWS",
+                  },
+                  {
+                    imgSrc: "/programming/docker.png",
+                    skill: "Docker",
+                  },
+                ]}
+              />
+              <Carousel
+                elementMargin=""
+                carouselMargin="mx-1"
+                ChildComponent={Skill}
+                list={[
+                  {
+                    imgSrc: "/programming/spring.png",
+                    skill: "Spring Boot",
+                  },
+                  {
+                    imgSrc: "/programming/express.png",
+                    skill: "Express",
+                  },
+                  {
+                    imgSrc: "/programming/sequelize.svg",
+                    skill: "Sequelize",
+                  },
+                  {
+                    imgSrc: "/programming/aws_s3.png",
+                    skill: "AWS S3",
+                  },
+                  {
+                    imgSrc: "/programming/aws_cdk.png",
+                    skill: "AWS CDK",
+                  },
+                ]}
+              />
             </div>
           </div>
         </div>
