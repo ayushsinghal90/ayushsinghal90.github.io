@@ -4,7 +4,7 @@ import Carousel from "../Carousal/Carousal";
 
 export default function About() {
   return (
-    <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto py-10 px-4 lg:px-8">
       <h2 className="text-t-secondary font-zodiak text-4xl lg:text-7xl font-bold mb-12 text-center">
         About Me
       </h2>
@@ -37,15 +37,15 @@ export default function About() {
           />
         </div>
         <div className="flex flex-col items-center justify-center lg:col-span-2">
-          <div className="bg-surface-brand-secondary flex flex-row space-x-5 rounded-xl p-6 mb-6 text-center h-48">
-            <div className="lg:order-1 justify-start w-1/3">
+          <div className="bg-surface-brand-secondary flex flex-row space-x-5 rounded-xl p-6 mb-6 text-center lg:h-48">
+            <div className="lg:order-1 justify-start w-auto">
               <img
                 src="/Demo.webp"
                 alt="Avatar"
-                className="h-20 w-20 rounded-full mb-4 mx-auto bg-surface-primary"
+                className="rounded-full lg:mb-4 mx-auto bg-surface-primary"
               />
             </div>
-            <div className="lg:order-2 justify-start text-left">
+            <div className="lg:order-2 justify-start text-left w-auto">
               <h3 className="font-zokiak text-t-invert text-2xl font-semibold mb-2">
                 Ayush Singhal
               </h3>

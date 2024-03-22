@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <>
-      <div className=" items-center mt-40">
+      <div className="items-center lg:mt-40 mt-32 px-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="text-center lg:text-left lg:order-1">
             <span className="text-green-500 mb-4">Available for Work</span>
@@ -63,7 +63,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="invisible lg:visible justify-end mt-8 lg:order-2">
+          <div className="hidden lg:block justify-end lg:mt-8 lg:order-2">
             <div className="relative">
               <img
                 src="/HeroImage.png"
@@ -79,7 +79,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Carousel ChildComponent={Logo} list={companyLogos} />
+      <div className="py-5">
+        <Carousel ChildComponent={Logo} list={companyLogos} />
+      </div>
       <About />
     </>
   );

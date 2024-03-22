@@ -1,7 +1,7 @@
 const Carousel = ({
   ChildComponent,
   list,
-  carouselMargin = "my-10",
+  carouselMargin = "lg:my-10",
   elementMargin = "[&_li]:mx-8",
 }) => {
   return (
