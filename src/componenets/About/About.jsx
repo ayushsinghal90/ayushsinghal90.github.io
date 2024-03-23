@@ -37,16 +37,16 @@ export default function About() {
           />
         </div>
         <div className="flex flex-col items-center justify-center lg:col-span-2">
-          <div className="bg-surface-brand-secondary flex flex-row space-x-5 rounded-xl p-6 mb-6 text-center lg:h-48">
-            <div className="lg:order-1 justify-start w-auto">
+          <div className="bg-surface-brand-secondary flex sm:flex-row flex-col space-x-5 rounded-xl p-6 mb-6 text-center lg:h-48">
+            <div className="lg:order-1 justify-center w-auto">
               <img
                 src="/Demo.webp"
                 alt="Avatar"
-                className="rounded-full lg:mb-4 mx-auto bg-surface-primary"
+                className="sm:w-full w-36 rounded-full mb-4 mx-auto bg-surface-primary"
               />
             </div>
             <div className="lg:order-2 justify-start text-left w-auto">
-              <h3 className="font-zokiak text-t-invert text-2xl font-semibold mb-2">
+              <h3 className="font-zokiak text-t-invert text-2xl font-semibold mb-2 sm:text-left text-center">
                 Ayush Singhal
               </h3>
               <p className="font-zokiak text-t-invert ">
@@ -58,7 +58,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="bg-surface-secondary text-center p-6 rounded-xl w-full">
+          <div className="bg-surface-secondary text-center sm:p-6 p-4 rounded-xl w-full">
             <h2 className="text-t-secondary font-zodiak text-3xl tracking-wide font-bold mb-4">
               My Stack
             </h2>
