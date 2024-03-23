@@ -25,7 +25,7 @@ export default function Home() {
             </p>
             <div className="flex justify-center lg:justify-start mb-8">
               <Link
-                to="https://www.linkedin.com/in/ayush-singhal-0a994b147/"
+                to={Profile.follow.linkedin}
                 className="bg-surface-brand font-semibold text-t-invert px-6 py-3 rounded-lg mr-4"
               >
                 Start a Project

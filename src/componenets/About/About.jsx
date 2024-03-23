@@ -37,14 +37,15 @@ export default function About() {
         About Me
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 font-zodiak font-thin">
-        <div className="bg-surface-secondary space-y-3 p-4 rounded-xl shadow-lg font-light">
-          {Profile.designation.map((data, _) => (
-            // eslint-disable-next-line react/jsx-key
-            <Designation
-              duration={data.duration}
-              company={data.company}
-              position={data.position}
-            />
+        <div className="flex flex-col space-y-3 p-4 rounded-xl shadow-lg font-light bg-surface-secondary flex-grow">
+          {Profile.designation.map((data, index) => (
+            <div key={index} className="flex-grow">
+              <Designation
+                duration={data.duration}
+                company={data.company}
+                position={data.position}
+              />
+            </div>
           ))}
         </div>
         <div className="flex flex-col items-center justify-center lg:col-span-2">
