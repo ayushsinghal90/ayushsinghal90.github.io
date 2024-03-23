@@ -9,6 +9,10 @@ import Logo from "../Cards/Logo";
 import Profile from "../../data/Profile.json";
 
 export default function Home() {
+  const companyLogos = Profile.designation.map(
+    (designation) => designation.logo
+  );
+
   return (
     <>
       <div className="items-center lg:mt-40 mt-32 px-10">
@@ -61,10 +65,7 @@ export default function Home() {
         </div>
       </div>
       <div className="py-5">
-        <Carousel
-          ChildComponent={Logo}
-          list={Profile.designation.map((designation) => designation.logo)}
-        />
+        <Carousel ChildComponent={Logo} list={companyLogos} />
       </div>
       <About />
     </>
