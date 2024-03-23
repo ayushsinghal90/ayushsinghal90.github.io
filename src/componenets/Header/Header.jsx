@@ -4,7 +4,7 @@ import Home from "../Icons/Home";
 import Twitter from "../Icons/Assets/Twitter";
 import Github from "../Icons/Assets/Github";
 import LinkedIn from "../Icons/Assets/Linkedin";
-import Profile from "../../data/Profile.json";
+import Profile from "../../data/Profile";
 
 export default function Header() {
   const [showHeader, setShowHeader] = useState(true);

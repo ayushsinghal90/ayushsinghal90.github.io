@@ -61,7 +61,10 @@ export default function Home() {
         </div>
       </div>
       <div className="py-5">
-        <Carousel ChildComponent={Logo} list={Profile.designation} />
+        <Carousel
+          ChildComponent={Logo}
+          list={Profile.designation.map((designation) => designation.logo)}
+        />
       </div>
       <About />
     </>
