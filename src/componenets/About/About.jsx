@@ -37,7 +37,7 @@ export default function About() {
           />
         </div>
         <div className="flex flex-col items-center justify-center lg:col-span-2">
-          <div className="bg-surface-brand-secondary flex sm:flex-row flex-col space-x-5 rounded-xl p-6 mb-6 text-center lg:h-48">
+          <div className="bg-surface-brand-secondary flex sm:flex-row flex-col space-x-5 rounded-xl sm:p-6 p-4 mb-6 text-center">
             <div className="lg:order-1 justify-center w-auto">
               <img
                 src="/Demo.webp"
@@ -49,7 +49,7 @@ export default function About() {
               <h3 className="font-zokiak text-t-invert text-2xl font-semibold mb-2 sm:text-left text-center">
                 Ayush Singhal
               </h3>
-              <p className="font-zokiak text-t-invert ">
+              <p className="font-zokiak text-t-invert text-lg">
                 Result driven Software Development Engineer with 5 years of
                 experience in designing, developing, and delivering innovative
                 software solutions. Competency in driving impactful projects and
