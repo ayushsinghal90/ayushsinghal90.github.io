@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 
-export default function GitHub() {
+export default function GitHub({ link }) {
   return (
-    <Link
-      to="https://github.com/ayushsinghal90"
-      className="text-t-secondary hover:text-gray-900"
-    >
+    <Link to={link} className="text-t-secondary hover:text-gray-900">
       <svg
         className="w-5 h-5"
         aria-hidden="true"

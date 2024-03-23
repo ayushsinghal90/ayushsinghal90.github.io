@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 
-export default function LinkedIn() {
+export default function LinkedIn({ link }) {
   return (
-    <Link
-      to="https://www.linkedin.com/in/ayush-singhal-0a994b147/"
-      className="text-t-secondary  hover:text-gray-900"
-    >
+    <Link to={link} className="text-t-secondary  hover:text-gray-900">
       <svg
         className="w-5 h-5"
         aria-hidden="true"

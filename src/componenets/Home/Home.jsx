@@ -6,37 +6,9 @@ import About from "../About/About";
 import { Link } from "react-router-dom";
 import Carousel from "../Carousal/Carousal";
 import Logo from "../Cards/Logo";
+import Profile from "../../data/Profile.json";
 
 export default function Home() {
-  const companyLogos = [
-    {
-      src: "/company/deel.png",
-      alt: "Deel",
-      height: "h-16",
-    },
-    {
-      src: "/company/amazon.png",
-      alt: "Amazon",
-      height: "h-9",
-    },
-    {
-      src: "/company/meesho.png",
-      alt: "Meesho",
-      height: "h-20",
-    },
-    {
-      src: "/company/razorpay.png",
-      alt: "Razorpay",
-      height: "h-9",
-    },
-    {
-      src: "/company/hashedin.png",
-      alt: "HashedIn",
-      height: "h-8",
-    },
-    // Add the rest of your logos here
-  ];
-
   return (
     <>
       <div className="items-center lg:mt-40 mt-32 px-10">
@@ -44,7 +16,7 @@ export default function Home() {
           <div className="text-center lg:text-left lg:order-1">
             <span className="text-green-500 mb-4">Available for Work</span>
             <h1 className="text-t-primary font-zodiak text-4xl lg:text-7xl font-bold mb-4">
-              I'm Ayush Singhal. <br />
+              I'm {Profile.details.name}. <br />
               I Code * Create <br /> * Innovate.
             </h1>
             <p className="text-t-secondary font-martel-sans text-xl lg:text-2xl mb-8">
@@ -71,16 +43,28 @@ export default function Home() {
                 className="w-32 lg:w-80 h-32 lg:h-80 rounded-full border-8 border-surface-brand-secondary mx-auto"
               />
               <div className="bg-b-secondary rounded-3xl p-2 bg-opacity-60 absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-4">
-                <IconButton icon={<Twitter />} color="bg-surface-tertiary" />
-                <IconButton icon={<Github />} color="bg-surface-tertiary" />
-                <IconButton icon={<LinkedIn />} color="bg-surface-tertiary" />
+                <IconButton
+                  icon={<Twitter link={Profile.follow.twitter} />}
+                  color="bg-surface-tertiary"
+                />
+                <IconButton
+                  icon={<Github link={Profile.follow.github} />}
+                  color="bg-surface-tertiary"
+                />
+                <IconButton
+                  icon={<LinkedIn link={Profile.follow.linkedin} />}
+                  color="bg-surface-tertiary"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="py-5">
-        <Carousel ChildComponent={Logo} list={companyLogos} />
+        <Carousel
+          ChildComponent={Logo}
+          list={Profile.designation.map((designation) => designation.logo)}
+        />
       </div>
       <About />
     </>

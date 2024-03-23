@@ -4,6 +4,7 @@ import Home from "../Icons/Home";
 import Twitter from "../Icons/Assets/Twitter";
 import Github from "../Icons/Assets/Github";
 import LinkedIn from "../Icons/Assets/Linkedin";
+import Profile from "../../data/Profile.json";
 
 export default function Header() {
   const [showHeader, setShowHeader] = useState(true);
@@ -47,9 +48,18 @@ export default function Header() {
               <IconButton icon={<Home />} color="bg-surface-invert" />
             </div>
             <div className="flex justify-between space-x-4 items-center lg:order-2">
-              <IconButton icon={<Twitter />} color="bg-surface-tertiary" />
-              <IconButton icon={<Github />} color="bg-surface-tertiary" />
-              <IconButton icon={<LinkedIn />} color="bg-surface-tertiary" />
+              <IconButton
+                icon={<Twitter link={Profile.follow.twitter} />}
+                color="bg-surface-tertiary"
+              />
+              <IconButton
+                icon={<Github link={Profile.follow.github} />}
+                color="bg-surface-tertiary"
+              />
+              <IconButton
+                icon={<LinkedIn link={Profile.follow.linkedin} />}
+                color="bg-surface-tertiary"
+              />
             </div>
             <div
               className="bg-surface-invert font-semibold px-4 py-2 rounded-lg hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-3"

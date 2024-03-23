@@ -1,8 +1,36 @@
 import Designation from "../Cards/Designation";
 import Skill from "../Cards/Skill";
 import Carousel from "../Carousal/Carousal";
+import Profile from "../../data/Profile.json";
 
 export default function About() {
+  const carouselSkills = () => {
+    const size = Profile.skills.length;
+    const starts = [0, size / 3, 2 * (size / 3)];
+    return (
+      <>
+        <Carousel
+          elementMargin=""
+          carouselMargin="mx-1"
+          ChildComponent={Skill}
+          list={Profile.skills.slice(starts[0], size / 3)}
+        />
+        <Carousel
+          elementMargin=""
+          carouselMargin="mx-1"
+          ChildComponent={Skill}
+          list={Profile.skills.slice(starts[1], starts[1] + size / 3)}
+        />
+        <Carousel
+          elementMargin=""
+          carouselMargin="mx-1"
+          ChildComponent={Skill}
+          list={Profile.skills.slice(starts[2], starts[2] + size / 3 + 1)}
+        />
+      </>
+    );
+  };
+
   return (
     <div className="max-w-7xl mx-auto py-10 px-4 lg:px-8">
       <h2 className="text-t-secondary font-zodiak text-4xl lg:text-7xl font-bold mb-12 text-center">
@@ -10,31 +38,14 @@ export default function About() {
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 font-zodiak font-thin">
         <div className="bg-surface-secondary space-y-3 p-4 rounded-xl shadow-lg font-light">
-          <Designation
-            duration="2024-now"
-            company="Deel"
-            position="Backend Engineer"
-          />
-          <Designation
-            duration="2022-2024"
-            company="Amazon"
-            position="Senior Software Developer"
-          />
-          <Designation
-            duration="2021-2022"
-            company="Meesho"
-            position="Senior Software Developer"
-          />
-          <Designation
-            duration="2020-2021"
-            company="Razorpay"
-            position="Software Developer"
-          />
-          <Designation
-            duration="2019-2020"
-            company="HashedIn"
-            position="Software Developer"
-          />
+          {Profile.designation.map((data, _) => (
+            // eslint-disable-next-line react/jsx-key
+            <Designation
+              duration={data.duration}
+              company={data.company}
+              position={data.position}
+            />
+          ))}
         </div>
         <div className="flex flex-col items-center justify-center lg:col-span-2">
           <div className="bg-surface-brand-secondary flex sm:flex-row flex-col space-x-5 rounded-xl sm:p-6 p-4 mb-6 text-center">
@@ -47,14 +58,10 @@ export default function About() {
             </div>
             <div className="lg:order-2 justify-start text-left w-auto">
               <h3 className="font-zokiak text-t-invert text-2xl font-semibold mb-2 sm:text-left text-center">
-                Ayush Singhal
+                {Profile.details.name}
               </h3>
               <p className="font-zokiak text-t-invert text-lg">
-                Result driven Software Development Engineer with 5 years of
-                experience in designing, developing, and delivering innovative
-                software solutions. Competency in driving impactful projects and
-                mentoring engineers for delivering products and solutions to
-                achieve strategic business outcomes.
+                {Profile.details.about}
               </p>
             </div>
           </div>
@@ -63,80 +70,7 @@ export default function About() {
               My Stack
             </h2>
             <div className="flex flex-wrap justify-center">
-              <Carousel
-                elementMargin=""
-                carouselMargin="mx-1"
-                ChildComponent={Skill}
-                list={[
-                  {
-                    imgSrc: "/programming/python.png",
-                    skill: "Python",
-                  },
-                  {
-                    imgSrc: "/programming/java.png",
-                    skill: "Java",
-                  },
-                  {
-                    imgSrc: "/programming/nodejs.png",
-                    skill: "Node.js",
-                  },
-                  {
-                    imgSrc: "/programming/mysql.png",
-                    skill: "MySql",
-                  },
-                ]}
-              />
-
-              <Carousel
-                elementMargin=""
-                carouselMargin="mx-1"
-                ChildComponent={Skill}
-                list={[
-                  {
-                    imgSrc: "/programming/redis.png",
-                    skill: "Redis",
-                  },
-                  {
-                    imgSrc: "/programming/dynamoDB.png",
-                    skill: "DynamoDB",
-                  },
-                  {
-                    imgSrc: "/programming/aws.webp",
-                    skill: "AWS",
-                  },
-                  {
-                    imgSrc: "/programming/docker.png",
-                    skill: "Docker",
-                  },
-                ]}
-              />
-              <Carousel
-                elementMargin=""
-                carouselMargin="mx-1"
-                ChildComponent={Skill}
-                list={[
-                  {
-                    imgSrc: "/programming/spring.png",
-                    skill: "Spring Boot",
-                  },
-                  {
-                    imgSrc: "/programming/express.png",
-                    skill: "Express",
-                  },
-                  {
-                    imgSrc: "/programming/sequelize.svg",
-                    skill: "Sequelize",
-                  },
-                  {
-                    imgSrc: "/programming/aws_s3.png",
-                    skill: "AWS S3",
-                  },
-                  {
-                    imgSrc: "/programming/aws_cdk.png",
-                    skill: "AWS CDK",
-                  },
-                ]}
-              />
+              {carouselSkills()}
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import Home from "../Icons/Home";
 import Twitter from "../Icons/Assets/Twitter";
 import Github from "../Icons/Assets/Github";
 import LinkedIn from "../Icons/Assets/Linkedin";
+import Profile from "../../data/Profile.json";
 
 export default function Footer() {
   return (
@@ -13,9 +14,18 @@ export default function Footer() {
             <IconButton icon={<Home />} color="bg-surface-invert" />
           </div>
           <div className="flex justify-between space-x-10 items-center lg:order-2">
-            <IconButton icon={<Twitter />} color="bg-surface-tertiary" />
-            <IconButton icon={<Github />} color="bg-surface-tertiary" />
-            <IconButton icon={<LinkedIn />} color="bg-surface-tertiary" />
+            <IconButton
+              icon={<Twitter link={Profile.follow.twitter} />}
+              color="bg-surface-tertiary"
+            />
+            <IconButton
+              icon={<Github link={Profile.follow.github} />}
+              color="bg-surface-tertiary"
+            />
+            <IconButton
+              icon={<LinkedIn link={Profile.follow.linkedin} />}
+              color="bg-surface-tertiary"
+            />
           </div>
         </div>
       </div>
