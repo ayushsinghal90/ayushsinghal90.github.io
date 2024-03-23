@@ -48,8 +48,8 @@ export default function Home() {
               I Code * Create <br /> * Innovate.
             </h1>
             <p className="text-t-secondary font-martel-sans text-xl lg:text-2xl mb-8">
-              Empowering Ideas Through End-to-End Development <br />
-              Expertise and Seamless User Interfaces
+              Experiences in designing, developing, and <br />
+              delivering innovative software solutions.
             </p>
             <div className="flex justify-center lg:justify-start mb-8">
               <Link
