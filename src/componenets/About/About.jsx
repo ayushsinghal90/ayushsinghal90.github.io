@@ -1,7 +1,7 @@
 import Designation from "../Cards/Designation";
 import Skill from "../Cards/Skill";
 import Carousel from "../Carousal/Carousal";
-import Profile from "../../data/Profile.json";
+import Profile from "../../data/Profile";
 
 export default function About() {
   const carouselSkills = () => {
