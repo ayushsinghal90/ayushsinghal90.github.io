@@ -11,7 +11,8 @@ import Profile from "../../data/Profile";
 export default function Home() {
   return (
     <>
-      <div className="items-center lg:mt-40 mt-32 px-10">
+      {/* <div className="items-center lg:mt-40 mt-32 px-10"> */}
+      <div className="items-center mt-10 px-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="text-center lg:text-left lg:order-1">
             <span className="text-green-500 mb-4">Available for Work</span>
@@ -30,9 +31,12 @@ export default function Home() {
               >
                 Start a Project
               </Link>
-              <div className="bg-b-secondary font-semibold text-t-secondary px-6 py-3 rounded-lg">
+              <Link
+                to={Profile.follow.github}
+                className="bg-b-secondary font-semibold text-t-secondary px-6 py-3 rounded-lg"
+              >
                 Browse Works
-              </div>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:block justify-end lg:mt-8 lg:order-2">

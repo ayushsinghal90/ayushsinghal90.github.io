@@ -10,9 +10,9 @@ export default function Footer() {
     <footer className="bg-surface-secondary shadow sticky  top-0 rounded-2xl">
       <div className="p-10">
         <div className="flex flex-col space-y-10 justify-between items-center mx-auto max-w-screen-xl">
-          <div className="flex items-center lg:order-1">
+          {/* <div className="flex items-center lg:order-1">
             <IconButton icon={<Home />} color="bg-surface-invert" />
-          </div>
+          </div> */}
           <div className="flex justify-between space-x-10 items-center lg:order-2">
             <IconButton
               icon={<Twitter link={Profile.follow.twitter} />}
