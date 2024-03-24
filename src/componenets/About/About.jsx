@@ -37,7 +37,7 @@ export default function About() {
         About Me
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 font-zodiak font-thin">
-        <div className="flex flex-col space-y-3 p-4 rounded-xl shadow-lg font-light bg-surface-secondary flex-grow">
+        <div className="flex flex-col space-y-3 p-4 rounded-xl shadow-lg font-light bg-surface-secondary flex-grow lg:order-1 order-2">
           {Profile.designation.map((data, index) => (
             <div key={index} className="flex-grow">
               <Designation
@@ -48,7 +48,7 @@ export default function About() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col items-center justify-center lg:col-span-2">
+        <div className="flex flex-col items-center justify-center lg:col-span-2 lg:order-2 order-1">
           <div className="bg-surface-brand-secondary flex sm:flex-row flex-col space-x-5 rounded-xl sm:p-6 p-4 mb-6 text-center">
             <div className="lg:order-1 justify-center w-auto">
               <img
